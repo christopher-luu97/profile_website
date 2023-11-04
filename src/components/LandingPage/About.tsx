@@ -14,14 +14,14 @@ export const About: React.FC = () => {
         <div className="flex-1 text-left p-4">
           <h2 className="text-3xl font-bold mb-4">Who I Am</h2>
           <p className="mb-4">
-            I'm a dedicated software developer with a passion for coding and
-            innovation. I thrive on tackling complex problems and turning ideas
-            into reality.
+            Welcome to my website, where I share my passion for building
+            software tools and showcasing them to the world. Join me on this
+            journey as I turn ideas into innovative products that you can follow
+            along with.
           </p>
           <p>
-            With hands-on experience in developing applications and a passion
-            for building decision-making tools, I am always eager to adopt new
-            technologies and strive for excellence in my work.
+            Software Engineer, Data Scienctist, Data Analyst, Consultant,
+            Magician, I'm a professional engineer that wears many hats.
           </p>
           <SkillsGrid />
         </div>
