@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
       {/* Website Title and some navigation links */}
       <div className="flex items-center">
         <Link to="/" className="font-bold text-xl mr-6">
-          MyWebsite
+          CHRIS LUU
         </Link>
         <div className="hidden sm:flex">
           <Link to="/projects" className="mx-2">
