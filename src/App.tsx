@@ -11,9 +11,12 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/christopher-luu97.github.io" element={<LandingPage />} />
+        <Route
+          path="/christopher-luu97.github.io/projects"
+          element={<Projects />}
+        />
+        <Route path="/christopher-luu97.github.io/blog" element={<Blog />} />
       </Routes>
       <Footer />
     </Router>
