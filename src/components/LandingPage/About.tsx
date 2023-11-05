@@ -19,8 +19,8 @@ export const About: React.FC = () => {
             hobby over on Medium and Youtube with the associated code all on
             Github. Have a snoop around!
           </h2>
-          <p className="font-mono">
-            Software Engineer, Data Scienctist, Data Analyst, Consultant, Code
+          <p>
+            Software engineer, Data Scientist, Consultant, Data Analyst, Code
             Wizard, I'm a professional engineer that has worn many hats. Here
             are some of my key techincal skills and knowledge developed through
             my years of experience.
