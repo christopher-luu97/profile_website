@@ -1,8 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { mediaLinks } from "./mediaLinks";
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const renderMediaLinks = (additionalStyles = "") =>
+    mediaLinks.map((link) => (
+      <a
+        key={link.name}
+        href={link.link} // Replace with actual URLs when available
+        className={`mx-2 ${additionalStyles}`}
+        aria-label={link.description}
+        target="_blank" // to open link in new tab
+        rel="noopener noreferrer"
+      >
+        <img src={link.icon} alt={link.name} className="w-6 h-6" />
+      </a>
+    ));
 
   return (
     <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
@@ -29,20 +44,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Navigation Links - Visible on larger screens */}
-      <nav className="hidden sm:flex items-center">
-        <a href="https://youtube.com" className="mx-2">
-          YouTube Icon
-        </a>
-        <a href="https://github.com" className="mx-2">
-          GitHub Icon
-        </a>
-        <a href="https://linkedin.com" className="mx-2">
-          LinkedIn Icon
-        </a>
-        <a href="https://medium.com" className="mx-2">
-          Medium Icon
-        </a>
-      </nav>
+      <nav className="hidden sm:flex items-center">{renderMediaLinks()}</nav>
 
       {/* Mobile menu (full-screen overlay) */}
       {isMenuOpen && (
@@ -84,18 +86,7 @@ export const Header: React.FC = () => {
             </div>
             {/* Social links */}
             <div className="flex justify-center pb-4">
-              <a href="https://youtube.com" className="mx-2">
-                YouTube Icon
-              </a>
-              <a href="https://github.com" className="mx-2">
-                GitHub Icon
-              </a>
-              <a href="https://linkedin.com" className="mx-2">
-                LinkedIn Icon
-              </a>
-              <a href="https://medium.com" className="mx-2">
-                Medium Icon
-              </a>
+              {renderMediaLinks("w-8 h-8")} {/* Adjust size as necessary */}
             </div>
           </nav>
         </div>

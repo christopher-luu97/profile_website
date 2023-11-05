@@ -3,15 +3,18 @@ import { skills } from "./Skills";
 
 export const SkillsGrid: React.FC = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-6">
       {skills.map((skill, index) => (
-        <div key={index} className="flex flex-col items-center">
+        <div
+          key={index}
+          className="flex flex-col items-center p-4 bg-gray-100 rounded-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200"
+        >
           <img
-            src={skill.icon} // Replace with the actual path to your icons
+            src={skill.icon}
             alt={skill.name}
-            className="h-12 w-12 mb-2" // Adjust size as needed
+            className="h-8 w-8 mb-2 animate-bounce-slow" // Adjust size as needed
           />
-          <h3 className="text-lg font-semibold">{skill.name}</h3>
+          <h3 className="text-md text-gray-800 font-bold">{skill.name}</h3>
         </div>
       ))}
     </div>

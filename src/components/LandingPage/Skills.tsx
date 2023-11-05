@@ -18,7 +18,7 @@ export const skills = [
   {
     name: "TailwindCSS",
     description: "Comfortable with CSS styling using TailwindCSS.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
   },
   {
     name: "Docker",
