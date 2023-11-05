@@ -4,7 +4,7 @@ import { SkillsGrid } from "./SkillsGrid"; // Assuming the SkillsGrid component 
 
 export const About: React.FC = () => {
   return (
-    <section className="container mx-auto p-6 bg-white shadow-xl animate-slide-in-bottom">
+    <section className="container mx-auto p-6 pb-0 bg-[#9C8B7E] animate-slide-in-bottom text-white">
       {/* Profile image only visible on mobile */}
       <div className="md:hidden p-4">
         <ProfileImage />

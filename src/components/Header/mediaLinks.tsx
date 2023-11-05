@@ -2,7 +2,7 @@ export const mediaLinks = [
   {
     name: "LinkedIn",
     description: "Link to my linkedin",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg",
     link: "https://www.linkedin.com/in/christopher-luu-542691149",
   },
   {
@@ -20,7 +20,7 @@ export const mediaLinks = [
   {
     name: "Youtube",
     description: "Link to my YouTube",
-    icon: "https://www.svgrepo.com/show/13671/youtube.svg",
+    icon: "https://www.svgrepo.com/show/513089/youtube-168.svg",
     link: "https://www.youtube.com/@chris_codes",
   },
 ];

@@ -30,9 +30,9 @@ export const ProjectsGrid: React.FC = () => {
   ).matches;
 
   return (
-    <section className="container mx-auto p-6 bg-white shadow-xl animate-slide-in-bottom">
+    <section className="mx-auto p-6 pt-0 bg-[#D5D2CD] shadow-xl animate-slide-in-bottom">
       <div className="text-left p-4">
-        <h1 className="text-5xl font-bold mb-4 text-indigo-600">Projects</h1>
+        <h1 className="text-5xl font-bold mb-4 text-black">Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.slice(0, displayCount).map((project) => (
             <div
