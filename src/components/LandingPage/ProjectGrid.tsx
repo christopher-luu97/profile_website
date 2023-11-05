@@ -5,6 +5,7 @@ import { mediaLinks } from "../Header/mediaLinks";
 
 export const ProjectsGrid: React.FC = () => {
   const [displayCount, setDisplayCount] = useState(3);
+  const [expandedDesc, setExpandedDesc] = useState<Record<string, boolean>>({});
 
   const handleSeeMore = () => {
     setDisplayCount((prevCount) => prevCount + 3);
@@ -19,12 +20,17 @@ export const ProjectsGrid: React.FC = () => {
     return mediaLinks.find((media) => media.name === mediaName)?.icon;
   };
 
+  // Toggle the full description view
+  const toggleDescription = (id: string) => {
+    setExpandedDesc((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
   const hoverSupported = window.matchMedia(
     "(hover: hover) and (pointer: fine)"
   ).matches;
 
   return (
-    <section className="container mx-auto p-6 bg-white rounded-lg shadow-xl animate-slide-in-bottom">
+    <section className="container mx-auto p-6 bg-white shadow-xl animate-slide-in-bottom">
       <div className="text-left p-4">
         <h1 className="text-5xl font-bold mb-4 text-indigo-600">Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -40,55 +46,63 @@ export const ProjectsGrid: React.FC = () => {
               />
               <div className="p-4 bg-white flex flex-col flex-grow">
                 <h5 className="text-lg font-bold mb-2">{project.name}</h5>
-                <p className="text-gray-700 text-base mb-4 flex-grow">
+                <p
+                  className={`text-gray-700 text-base mb-4 flex-grow ${
+                    !expandedDesc[project.id] ? "line-clamp-3" : ""
+                  }`}
+                  onClick={() => toggleDescription(project.id)}
+                >
                   {project.projectDescription}
                 </p>
-                <div className="flex justify-start space-x-4 mt-4">
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={getMediaIcon("GitHub")}
-                        alt="GitHub"
-                        className={`clickable-icon mx-2 w-8 h-8 hover:scale-110 focus:scale-110 transition-transform ${
-                          !hoverSupported ? "animate-pulse" : ""
-                        }`}
-                      />
-                    </a>
-                  )}
-                  {project.articleUrl && (
-                    <a
-                      href={project.articleUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={getMediaIcon("Medium")}
-                        alt="Medium"
-                        className={`clickable-icon mx-2 w-8 h-8 hover:scale-110 focus:scale-110 transition-transform ${
-                          !hoverSupported ? "animate-pulse" : ""
-                        }`}
-                      />
-                    </a>
-                  )}
-                  {project.youtubeUrl && (
-                    <a
-                      href={project.youtubeUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        src={getMediaIcon("Youtube")}
-                        alt="Youtube"
-                        className={`clickable-icon mx-2 w-8 h-8 hover:scale-110 focus:scale-110 transition-transform ${
-                          !hoverSupported ? "animate-pulse" : ""
-                        }`}
-                      />
-                    </a>
-                  )}
+                {/* Spacer div to push the icons down */}
+                <div className="mt-auto">
+                  <div className="flex justify-start space-x-4">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={getMediaIcon("GitHub")}
+                          alt="GitHub"
+                          className={`clickable-icon mx-2 w-8 h-8 hover:scale-110 focus:scale-110 transition-transform ${
+                            !hoverSupported ? "animate-pulse" : ""
+                          }`}
+                        />
+                      </a>
+                    )}
+                    {project.articleUrl && (
+                      <a
+                        href={project.articleUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={getMediaIcon("Medium")}
+                          alt="Medium"
+                          className={`clickable-icon mx-2 w-8 h-8 hover:scale-110 focus:scale-110 transition-transform ${
+                            !hoverSupported ? "animate-pulse" : ""
+                          }`}
+                        />
+                      </a>
+                    )}
+                    {project.youtubeUrl && (
+                      <a
+                        href={project.youtubeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img
+                          src={getMediaIcon("Youtube")}
+                          alt="Youtube"
+                          className={`clickable-icon mx-2 w-8 h-8 hover:scale-110 focus:scale-110 transition-transform ${
+                            !hoverSupported ? "animate-pulse" : ""
+                          }`}
+                        />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

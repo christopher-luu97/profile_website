@@ -8,6 +8,7 @@ export const LandingPage: React.FC = () => {
       <div className="pb-16"></div>
       <About />
       <ProjectsGrid />
+      <div className="pb-4"></div>
     </div>
   );
 };
