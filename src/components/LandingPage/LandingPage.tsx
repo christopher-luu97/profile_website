@@ -8,7 +8,7 @@ export const LandingPage: React.FC = () => {
       <div className="">
         <div className="bg-[#9C8B7E] min-h-screen">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-[#9C8B7E]">
-            <div className="pb-16 "></div>
+            <div className="pb-4 "></div>
             <About />
           </div>
         </div>

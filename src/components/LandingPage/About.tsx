@@ -12,12 +12,12 @@ export const About: React.FC = () => {
       <div className="flex flex-col md:flex-row">
         {/* Text section */}
         <div className="flex-1 text-left p-4">
-          <h1 className="text-5xl font-bold mb-4 font-sans">Who I Am</h1>
+          <h1 className="text-5xl font-bold mb-4 font-sans">Hey, I'm Chris!</h1>
           <h2 className="text-xl mb-4 font-mono font-semibold">
-            Welcome to my website, where I share my passion for building
-            software tools and showcasing them to the world. Join me on this
-            journey as I turn ideas into innovative products that you can follow
-            along with.
+            Here I share my passion for building software tools and showcasing
+            them to the world. I talk about what I have built and explored as a
+            hobby over on Medium and Youtube with the associated code all on
+            Github. Have a snoop around!
           </h2>
           <p className="font-mono">
             Software Engineer, Data Scienctist, Data Analyst, Consultant, Code
