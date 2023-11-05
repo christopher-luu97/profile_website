@@ -3,7 +3,7 @@ export const mediaLinks = [
     name: "LinkedIn",
     description: "Link to my linkedin",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
-    link: "www.linkedin.com/in/christopher-luu-542691149",
+    link: "https://www.linkedin.com/in/christopher-luu-542691149",
   },
   {
     name: "GitHub",
