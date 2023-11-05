@@ -1,9 +1,20 @@
 // ProjectsGrid.tsx
-import React from "react";
+import React, { useState } from "react";
 import { projects } from "./ProjectData";
 import { mediaLinks } from "../Header/mediaLinks";
 
 export const ProjectsGrid: React.FC = () => {
+  const [displayCount, setDisplayCount] = useState(3);
+
+  const handleSeeMore = () => {
+    setDisplayCount((prevCount) => prevCount + 3);
+  };
+
+  // Reset the number of projects displayed to the initial count
+  const handleShowLess = () => {
+    setDisplayCount(3);
+  };
+
   const getMediaIcon = (mediaName: string) => {
     return mediaLinks.find((media) => media.name === mediaName)?.icon;
   };
@@ -17,7 +28,7 @@ export const ProjectsGrid: React.FC = () => {
       <div className="text-left p-4">
         <h1 className="text-5xl font-bold mb-4 text-indigo-600">Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {projects.slice(0, displayCount).map((project) => (
             <div
               key={project.id}
               className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full"
@@ -29,7 +40,7 @@ export const ProjectsGrid: React.FC = () => {
               />
               <div className="p-4 bg-white flex flex-col flex-grow">
                 <h5 className="text-lg font-bold mb-2">{project.name}</h5>
-                <p className="text-gray-700 text-base flex-grow overflow-hidden overflow-ellipsis whitespace-nowrap">
+                <p className="text-gray-700 text-base mb-4 flex-grow">
                   {project.projectDescription}
                 </p>
                 <div className="flex justify-start space-x-4 mt-4">
@@ -82,6 +93,24 @@ export const ProjectsGrid: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-6 space-x-3">
+          {displayCount < projects.length && (
+            <button
+              onClick={handleSeeMore}
+              className="px-6 py-2 border rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none"
+            >
+              See more
+            </button>
+          )}
+          {displayCount > 3 && (
+            <button
+              onClick={handleShowLess}
+              className="px-6 py-2 border rounded-md bg-red-600 text-white hover:bg-red-700 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none"
+            >
+              Show less
+            </button>
+          )}
         </div>
       </div>
     </section>
