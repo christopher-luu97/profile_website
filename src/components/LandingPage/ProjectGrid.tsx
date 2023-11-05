@@ -30,7 +30,7 @@ export const ProjectsGrid: React.FC = () => {
   ).matches;
 
   return (
-    <section className="mx-auto p-6 pt-0 bg-[#D5D2CD] shadow-xl animate-slide-in-bottom">
+    <section className="mx-auto p-6 pt-0 animate-slide-in-bottom">
       <div className="text-left p-4">
         <h1 className="text-5xl font-bold mb-4 text-black">Projects</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -44,10 +44,10 @@ export const ProjectsGrid: React.FC = () => {
                 alt={project.name}
                 className="w-full h-64 object-cover"
               />
-              <div className="p-4 bg-white flex flex-col flex-grow">
+              <div className="p-4 bg-white flex flex-col flex-grow font-mono">
                 <h5 className="text-lg font-bold mb-2">{project.name}</h5>
                 <p
-                  className={`text-gray-700 text-base mb-4 flex-grow ${
+                  className={`text-gray-700 text-base mb-4 break-words flex-grow ${
                     !expandedDesc[project.id] ? "line-clamp-3" : ""
                   }`}
                   onClick={() => toggleDescription(project.id)}

@@ -10,6 +10,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      lineClamp: {
+        3: "3",
+      },
       keyframes: {
         fadeIn: {
           "0%": { opacity: "0" },
@@ -44,6 +47,19 @@ module.exports = {
         "bounce-slow": "bounceSlow 3s infinite",
         "slide-in-bottom": "slideInFromBottom 0.5s ease-out forwards",
         pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+      fontFamily: {
+        sans: [
+          "-apple-system", // Use -apple-system as the primary font
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          "Oxygen-Sans",
+          "Ubuntu",
+          "Cantarell",
+          '"Helvetica Neue"',
+          "sans-serif", // Generic sans-serif as a fallback
+        ],
       },
     },
   },
