@@ -2,7 +2,7 @@
   "name": "christopher_luu97_portfolio",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://christopher-luu97.github.io/christopher-luu97.github.io",
+  "homepage": "http://christopher-luu97.github.io/profileWebsite",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
