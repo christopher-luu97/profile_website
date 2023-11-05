@@ -12,16 +12,18 @@ export const About: React.FC = () => {
       <div className="flex flex-col md:flex-row">
         {/* Text section */}
         <div className="flex-1 text-left p-4">
-          <h2 className="text-3xl font-bold mb-4">Who I Am</h2>
-          <p className="mb-4">
+          <h1 className="text-5xl font-bold mb-4">Who I Am</h1>
+          <h2 className="text-xl mb-4">
             Welcome to my website, where I share my passion for building
             software tools and showcasing them to the world. Join me on this
             journey as I turn ideas into innovative products that you can follow
             along with.
-          </p>
+          </h2>
           <p>
-            Software Engineer, Data Scienctist, Data Analyst, Consultant,
-            Magician, I'm a professional engineer that wears many hats.
+            Software Engineer, Data Scienctist, Data Analyst, Consultant, Code
+            Wizard, I'm a professional engineer that has worn many hats. Here
+            are some of my key techincal skills and knowledge developed through
+            my years of experience.
           </p>
           <SkillsGrid />
         </div>
