@@ -33,12 +33,17 @@ module.exports = {
           "0%": { transform: "translateY(100%)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        pulse: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" },
+        },
       },
       animation: {
         "fade-in": "fadeIn 1s ease-out",
         "slide-in-right": "slideInRight 0.5s ease-out",
         "bounce-slow": "bounceSlow 3s infinite",
         "slide-in-bottom": "slideInFromBottom 0.5s ease-out forwards",
+        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },

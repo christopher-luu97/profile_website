@@ -5,7 +5,7 @@ export interface Project {
   name: string;
   projectDescription: string;
   imageUrl: string;
-  articleSlug: string;
+  articleUrl?: string;
   githubUrl?: string;
   youtubeUrl?: string;
 }
@@ -16,7 +16,7 @@ export const projects: Project[] = [
     name: "Project One",
     projectDescription: "This is a short description of the first project.",
     imageUrl: "path_to_your_project_image.jpg", // replace with your image path
-    articleSlug: "article_name_1",
+    articleUrl: "/",
     githubUrl: "/",
     youtubeUrl: "/",
   },
@@ -25,9 +25,8 @@ export const projects: Project[] = [
     name: "Project Two",
     projectDescription: "This is a short description of the second project.",
     imageUrl: "path_to_your_project_image.jpg", // replace with your image path
-    articleSlug: "article_name_2",
+    articleUrl: "/",
     githubUrl: "/",
     youtubeUrl: "/",
   },
-  // ...add more projects as needed
 ];
