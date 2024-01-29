@@ -12,11 +12,23 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "project-004",
+    name: "Manga Tracker Application",
+    projectDescription:
+      "Manga tracking across various websites all through one interface",
+    imageUrl: "https://i3.ytimg.com/vi/4EDpw_qhb-A/maxresdefault.jpg",
+    articleUrl:
+      "https://medium.com/@cluu.codes1337/building-a-manga-tracking-application-journey-and-design-6fd7d7d68655",
+    githubUrl: "https://github.com/christopher-luu97/manga_bookmarker",
+    youtubeUrl:
+      "https://www.youtube.com/watch?v=4EDpw_qhb-A&ab_channel=chriscodes",
+  },
+  {
     id: "project-003",
     name: "Code search and question answering",
     projectDescription:
       " Vector search on code repositories with Marqo and question answering with a large language model, all offline.",
-    imageUrl: "https://i.ytimg.com/vi/tcz7p1Tx0LY/maxresdefault.jpg", // replace with your image path
+    imageUrl: "https://i.ytimg.com/vi/tcz7p1Tx0LY/maxresdefault.jpg",
     articleUrl:
       "https://medium.com/@cluu.codes1337/code-search-and-question-answering-using-marqo-and-a-locally-hosted-llm-00d0dda8e8e7",
     githubUrl: "https://github.com/christopher-luu97/repo_search",
@@ -28,7 +40,7 @@ export const projects: Project[] = [
     name: "Search your transcripts",
     projectDescription:
       "Efficiently search through transcriptions with Weaviate. A clone of www.hubermantranscripts.com but with my own spin.",
-    imageUrl: "https://i.ytimg.com/vi/1Rlz3VlKcsk/maxresdefault.jpg", // replace with your image path
+    imageUrl: "https://i.ytimg.com/vi/1Rlz3VlKcsk/maxresdefault.jpg",
     articleUrl:
       "https://medium.com/@cluu.codes1337/how-i-made-a-complete-vector-search-web-application-with-weaviate-d88e3b667bb",
     githubUrl: "https://github.com/christopher-luu97/TranscriptionSearch",
@@ -40,7 +52,7 @@ export const projects: Project[] = [
     name: "Transcription web application",
     projectDescription:
       "Transcribe your uploaded media files all in the browser using WhisperX combined with an interface to search via keywords and timestamps",
-    imageUrl: "https://i.ytimg.com/vi/FIFocNaa4mo/maxresdefault.jpg", // replace with your image path
+    imageUrl: "https://i.ytimg.com/vi/FIFocNaa4mo/maxresdefault.jpg",
     githubUrl: "https://github.com/christopher-luu97/transcription_webapp",
     youtubeUrl:
       "https://www.youtube.com/watch?v=FIFocNaa4mo&ab_channel=chriscodes",
