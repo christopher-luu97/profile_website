@@ -11,6 +11,18 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    {
+    id: "project-005",
+    name: "Canberra Food Guide",
+    projectDescription:
+      "Restaurant finder for the city of Canberra, a Google maps replacement",
+    imageUrl: "https://img.youtube.com/vi/cppcNVOCIek/maxresdefault.jpg",
+    articleUrl:
+      "https://medium.com/@cluu.codes1337/i-built-my-own-restaurant-finder-because-google-maps-was-starving-me-8dc861857c0b",
+    githubUrl: "#",
+    youtubeUrl:
+      "https://youtu.be/cppcNVOCIek",
+  },
   {
     id: "project-004",
     name: "Manga Tracker Application",
