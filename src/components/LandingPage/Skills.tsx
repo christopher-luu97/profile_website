@@ -18,7 +18,7 @@ export const skills = [
   {
     name: "TailwindCSS",
     description: "Comfortable with CSS styling using TailwindCSS.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
     name: "Docker",
@@ -32,10 +32,10 @@ export const skills = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg",
   },
   {
-    name: "AWS",
+    name: "GCP",
     description:
-      "Verified certifications with AWS and professional experience with GCP",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+      "Professional experience with GCP with deployed products and tooling",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
   },
   {
     name: "PowerBI",
