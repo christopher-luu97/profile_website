@@ -1,67 +1,38 @@
 export const skills = [
   {
-    name: "Python",
+    name: "Software Engineering",
     description:
-      "Strong in full-stack development for web and desktop applications.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      "Designing and building practical applications, tools, interfaces, and backend systems.",
+    icon: "https://unpkg.com/lucide-static@latest/icons/code-2.svg",
   },
   {
-    name: "SQL",
-    description: "Experienced with RDBMS like SQL Server.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
-  },
-  {
-    name: "TypeScript",
-    description: "Experienced with front-end frameworks like React.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
-    name: "TailwindCSS",
-    description: "Comfortable with CSS styling using TailwindCSS.",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-  },
-  {
-    name: "Docker",
-    description: "Hands on experience with containerizing applications",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-  },
-  {
-    name: "R",
+    name: "AI and Data",
     description:
-      "Demonstrated capability in delivering analysis and automation with R",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg",
+      "Applying analytics, machine learning, search, automation, and modern AI patterns to real problems.",
+    icon: "https://unpkg.com/lucide-static@latest/icons/brain-circuit.svg",
   },
   {
-    name: "GCP",
+    name: "Prototyping to Production",
     description:
-      "Professional experience with GCP with deployed products and tooling",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+      "Taking ideas from proof of concept and pilot through to production-ready delivery.",
+    icon: "https://unpkg.com/lucide-static@latest/icons/rocket.svg",
   },
   {
-    name: "PowerBI",
-    description: "Development of dashboards for on-demand insights",
-    icon: "https://raw.githubusercontent.com/microsoft/PowerBI-Icons/f1d4dd6cd52338a186f58bc29c437f64cf6b327b/SVG/Power-BI.svg",
-  },
-  {
-    name: "Git",
-    description: "Version control using Git",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  },
-  {
-    name: "Github",
-    description: "Side projects using Github for version control and CI/CD",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-  },
-  {
-    name: "Bitbucket",
+    name: "Architecture and Systems",
     description:
-      "Professional experience with Bitbucket for version control and CI/CD",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
+      "Thinking across integration, environments, system design, and end-to-end technical delivery.",
+    icon: "https://unpkg.com/lucide-static@latest/icons/network.svg",
   },
   {
-    name: "TortoiseGit",
+    name: "Product and Delivery",
     description:
-      "Professional experience with Tortoise Git with Subversion for version control",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tortoisegit/tortoisegit-original.svg",
+      "Balancing user needs, technical constraints, and delivery outcomes to make solutions useful.",
+    icon: "https://unpkg.com/lucide-static@latest/icons/layout-dashboard.svg",
+  },
+  {
+    name: "Consulting and Strategy",
+    description:
+      "Connecting technical implementation with organisational context, governance, and decision-making.",
+    icon: "https://unpkg.com/lucide-static@latest/icons/compass.svg",
   },
 ];

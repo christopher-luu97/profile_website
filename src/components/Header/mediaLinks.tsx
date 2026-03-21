@@ -14,7 +14,7 @@ export const mediaLinks = [
   {
     name: "Medium",
     description: "Link to my Medium",
-    icon: "https://www.svgrepo.com/show/512457/medium-149.svg",
+    icon: "https://www.svgrepo.com/show/340609/logo-medium.svg",
     link: "https://medium.com/@cluu.codes1337",
   },
   {

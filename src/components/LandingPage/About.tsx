@@ -1,35 +1,64 @@
 import React from "react";
-import { ProfileImage } from "./ProfileImage"; // Assuming the ProfileImage component is in the same directory
-import { SkillsGrid } from "./SkillsGrid"; // Assuming the SkillsGrid component is in the same directory
+import { SkillsGrid } from "./SkillsGrid";
 
 export const About: React.FC = () => {
   return (
-    <section className="container mx-auto p-6 pb-0 bg-[#9C8B7E] animate-slide-in-bottom text-white">
-      {/* Profile image only visible on mobile */}
-      <div className="md:hidden p-4">
-        <ProfileImage />
+    <section className="kh-card kh-about">
+      <div className="kh-section-heading kh-about__heading">
+        <p className="kh-section-heading__eyebrow">PROFILE</p>
+        <h2 className="kh-section-heading__title">About</h2>
       </div>
-      <div className="flex flex-col md:flex-row">
-        {/* Text section */}
-        <div className="flex-1 text-left p-4">
-          <h1 className="text-5xl font-bold mb-4 font-sans">Hey, I'm Chris!</h1>
-          <h2 className="text-xl mb-4 font-mono font-semibold">
-            Here I share my passion for building software tools and showcasing
-            them to the world. I talk about what I have built and explored as a
-            hobby over on Medium and Youtube with the associated code all on
-            Github. Have a snoop around!
-          </h2>
-          <p>
-            Software engineer, Data Scientist, Consultant, Data Analyst, Code
-            Wizard, I'm a professional engineer that has worn many hats. Here
-            are some of my key techincal skills and knowledge developed through
-            my years of experience.
-          </p>
-          <SkillsGrid />
+
+      <div className="kh-about__layout">
+        <div className="kh-about__main">
+          <div className="kh-about__content">
+            <h3 className="kh-about__headline">Hey, I’m Chris.</h3>
+
+            <p className="kh-about__lead">
+              I work broadly across the software and digital delivery space as a
+              technical engineer who can move between strategy and
+              implementation.
+            </p>
+
+            <p className="kh-about__body">
+              That includes architecture, prototyping, system design, AI and
+              analytics, integration, delivery, and understanding how technology
+              works end to end across an organisation.
+            </p>
+
+            <p className="kh-about__body">
+              I enjoy turning ideas into practical outcomes, from proofs of
+              concept and pilots through to production-ready systems that are
+              useful, maintainable, and aligned to real business needs.
+            </p>
+
+            <div className="kh-about__divider" />
+          </div>
+
+          <aside className="kh-about__panel" aria-label="Profile summary">
+            <div className="kh-about__panel-card">
+              <p className="kh-about__panel-label">AT A GLANCE</p>
+
+              <h4 className="kh-about__panel-title">Technical Engineer</h4>
+
+              <p className="kh-about__panel-text">
+                Experienced across the entire technology lifecycle
+              </p>
+
+              <div className="kh-about__panel-divider" />
+
+              <ul className="kh-about__panel-list">
+                <li>Strategy, discovery, and problem framing</li>
+                <li>Prototyping, experimentation, and validation</li>
+                <li>Engineering, systems, and implementation</li>
+                <li>Production delivery and operationalisation</li>
+              </ul>
+            </div>
+          </aside>
         </div>
-        {/* Profile image only visible on desktop */}
-        <div className="flex-1 p-2 hidden md:block">
-          <ProfileImage />
+
+        <div className="kh-about__skills">
+          <SkillsGrid />
         </div>
       </div>
     </section>
