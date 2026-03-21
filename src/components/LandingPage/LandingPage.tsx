@@ -25,7 +25,9 @@ export const LandingPage: React.FC = () => {
               systems, and better organisational outcomes.
             </p>
           </div>
-          <ProfileImage />
+          <div className="kh-hero__visual">
+            <ProfileImage />
+          </div>
         </div>
 
         <div className="kh-divider">
