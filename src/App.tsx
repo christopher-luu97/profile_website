@@ -8,18 +8,17 @@ import { LandingPage } from "./components/LandingPage/LandingPage";
 
 function App() {
   return (
-    <>
+    <div className="kh-app">
+      <div className="kh-app__bg" />
+
       <Header />
+
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        {/* <Route
-          path="/christopher-luu97.github.io/projects"
-          element={<Projects />}
-        />
-        <Route path="/christopher-luu97.github.io/blog" element={<Blog />} /> */}
       </Routes>
+
       <Footer />
-    </>
+    </div>
   );
 }
 

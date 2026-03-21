@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from "../../assets/LandingPageAssets/profile_image.png"; // Adjust the path as necessary
+import profileImage from "../../assets/LandingPageAssets/profile_image.png";
 
 export const ProfileImage: React.FC = () => {
   return (
