@@ -15,8 +15,8 @@ export const About: React.FC = () => {
           <h3 className="kh-about__headline">Hey, I'm Chris.</h3>
 
           <p className="kh-about__lead">
-            I'm a software engineer and data/AI consultant based in Canberra,
-            Australia.
+            I'm a software engineer and AI specialist with practical experience
+            in consulting to Government.
           </p>
 
           <p className="kh-about__body">

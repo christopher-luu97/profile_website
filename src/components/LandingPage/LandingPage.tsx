@@ -18,10 +18,10 @@ export const LandingPage: React.FC = () => {
       <section className="kh-hero" aria-label="Introduction">
         <div className="kh-hero__inner">
           <div className="kh-hero__copy">
-            <p className="kh-hero__eyebrow">CHRISTOPHER LUU — CANBERRA, AUSTRALIA</p>
+            <p className="kh-hero__eyebrow">CHRISTOPHER LUU</p>
             <h1 className="kh-hero__title">
               Software engineer
-              <span>data · AI · systems</span>
+              <span>AI · data · systems</span>
             </h1>
             <p className="kh-hero__subtitle">
               Building practical production systems across agentic AI, RAG and
