@@ -1,32 +1,57 @@
 import React from "react";
 import { About } from "./About";
+import { CapabilitiesSection } from "./CapabilitiesSection";
+import { ExperienceSection } from "./ExperienceSection";
+import { CaseStudiesSection } from "./CaseStudiesSection";
+import { StackSection } from "./StackSection";
+import { ContactSection } from "./ContactSection";
 import { ProjectsGrid } from "./ProjectGrid";
-import { ProfileImage } from "./ProfileImage";
+import { AgentTerminal } from "./AgentTerminal";
 import "./LandingPage.css";
 
 export const LandingPage: React.FC = () => {
   return (
     <main className="kh-page">
       <div className="kh-page__noise" />
-      <div className="kh-page__glow kh-page__glow--left" />
-      <div className="kh-page__glow kh-page__glow--right" />
 
-      <section className="kh-hero">
+      {/* Hero */}
+      <section className="kh-hero" aria-label="Introduction">
         <div className="kh-hero__inner">
           <div className="kh-hero__copy">
             <p className="kh-hero__eyebrow">CHRISTOPHER LUU</p>
             <h1 className="kh-hero__title">
-              Technical engineer
-              <span>for modern systems</span>
+              Software engineer
+              <span>AI · data · systems</span>
             </h1>
             <p className="kh-hero__subtitle">
-              I work across strategy, software, analytics, AI, and delivery,
-              helping turn ideas into proof of concepts, pilots, production
-              systems, and better organisational outcomes.
+              Building practical production systems across agentic AI, RAG and
+              enterprise search, data engineering, full stack applications,
+              geospatial analytics, and secure government delivery.
             </p>
+            <div className="kh-hero__actions">
+              <a
+                href="https://www.linkedin.com/in/christopher-luu-542691149"
+                className="kh-button kh-button--primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/christopher-luu97"
+                className="kh-button kh-button--outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a href="#capabilities" className="kh-button kh-button--ghost">
+                View capabilities ↓
+              </a>
+            </div>
           </div>
           <div className="kh-hero__visual">
-            <ProfileImage />
+            <AgentTerminal />
           </div>
         </div>
 
@@ -36,15 +61,52 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="kh-section kh-section--about">
+      {/* About / Summary */}
+      <section className="kh-section kh-section--about" id="about">
         <div className="kh-container">
           <About />
         </div>
       </section>
 
-      <section className="kh-section kh-section--projects">
+      {/* Capabilities with recruiter mode selector */}
+      <section className="kh-section" id="capabilities">
+        <div className="kh-container">
+          <CapabilitiesSection />
+        </div>
+      </section>
+
+      {/* Experience proof */}
+      <section className="kh-section" id="experience">
+        <div className="kh-container">
+          <ExperienceSection />
+        </div>
+      </section>
+
+      {/* Case studies */}
+      <section className="kh-section" id="case-studies">
+        <div className="kh-container">
+          <CaseStudiesSection />
+        </div>
+      </section>
+
+      {/* Technical stack */}
+      <section className="kh-section" id="stack">
+        <div className="kh-container">
+          <StackSection />
+        </div>
+      </section>
+
+      {/* Public builds */}
+      <section className="kh-section" id="projects">
         <div className="kh-container">
           <ProjectsGrid />
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="kh-section" id="contact">
+        <div className="kh-container">
+          <ContactSection />
         </div>
       </section>
     </main>
