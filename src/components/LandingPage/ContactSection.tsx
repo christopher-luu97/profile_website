@@ -6,17 +6,11 @@ export const ContactSection: React.FC = () => {
   const github = mediaLinks.find((l) => l.name === "GitHub");
 
   return (
-    <section
-      className="kh-card kh-contact"
-      aria-labelledby="contact-heading"
-    >
+    <section className="kh-card kh-contact" aria-labelledby="contact-heading">
       <h2 className="kh-contact__headline" id="contact-heading">
         Let's connect.
       </h2>
-      <p className="kh-contact__text">
-        Open to engineering, data, AI, and consulting opportunities across
-        government, healthcare, and technology. Based in Australia.
-      </p>
+      <p className="kh-contact__text"></p>
       <div className="kh-contact__actions">
         {linkedin && (
           <a

@@ -21,15 +21,17 @@ export const CaseStudiesSection: React.FC = () => {
       </div>
       <p className="kh-case-studies__intro">
         These case studies are in development. Each will demonstrate a real
-        delivery pattern using synthetic or anonymised data. Labels reflect
-        current status honestly.
+        delivery pattern using synthetic or anonymised data that I have
+        delivered in production.
       </p>
       <div className="kh-case-studies__grid">
         {caseStudies.map((cs, idx) => (
           <article
             key={cs.id}
             data-reveal=""
-            style={{ "--reveal-delay": `${idx * 0.09}s` } as React.CSSProperties}
+            style={
+              { "--reveal-delay": `${idx * 0.09}s` } as React.CSSProperties
+            }
             className="kh-case-study-card"
           >
             <div className="kh-case-study-card__header">
