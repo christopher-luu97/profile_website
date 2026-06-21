@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { mediaLinks } from "./mediaLinks";
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isMac, setIsMac] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMac(/Mac|iPhone|iPad|iPod/.test(navigator.platform));
+  }, []);
+
+  const openPalette = () => {
+    window.dispatchEvent(
+      new KeyboardEvent("keydown", { key: "k", metaKey: true, bubbles: true }),
+    );
+  };
 
   const closeMenu = (): void => setIsMenuOpen(false);
   const toggleMenu = (): void => setIsMenuOpen((prev) => !prev);
@@ -28,12 +39,22 @@ export const Header: React.FC = () => {
         <div className="kh-header__inner">
           <div className="kh-header__brand">
             <Link to="/" className="kh-header__logo" onClick={closeMenu}>
-              <span className="kh-header__logo-mark" aria-hidden="true" />
               <span className="kh-header__logo-text">CHRIS LUU</span>
             </Link>
           </div>
 
-          <nav className="kh-header__desktop-nav" aria-label="Social links">
+          <nav className="kh-header__desktop-nav" aria-label="Site navigation">
+            <button
+              type="button"
+              className="kh-header__palette-btn"
+              onClick={openPalette}
+              aria-label="Open command palette"
+            >
+              <span className="kh-header__palette-hint">
+                {isMac ? "⌘" : "Ctrl"}K
+              </span>
+              <span className="kh-header__palette-label">Jump to…</span>
+            </button>
             {renderMediaLinks()}
           </nav>
 

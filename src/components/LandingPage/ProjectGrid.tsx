@@ -35,13 +35,14 @@ export const ProjectsGrid: React.FC = () => {
   return (
     <section className="kh-projects">
       <div className="kh-section-heading">
-        <p className="kh-section-heading__eyebrow">SIDE PROJECTS FOR FUN</p>
-        <h2 className="kh-section-heading__title">Projects</h2>
+        <p className="kh-section-heading__eyebrow">PUBLIC BUILDS AND EXPERIMENTS</p>
+        <h2 className="kh-section-heading__title">Public builds</h2>
       </div>
 
       <p className="kh-projects__intro">
-        A mix of experiments, applications, technical tools, and software builds
-        across search, AI, interfaces, and data products.
+        Personal experiments and open-source builds. These projects were built
+        for learning, curiosity, and fun — they don't represent the full scope
+        of professional delivery.
       </p>
 
       <div className="kh-projects__grid">
