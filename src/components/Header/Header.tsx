@@ -44,6 +44,9 @@ export const Header: React.FC = () => {
           </div>
 
           <nav className="kh-header__desktop-nav" aria-label="Site navigation">
+            <Link to="/blog" className="kh-header__nav-link">
+              Blog
+            </Link>
             <button
               type="button"
               className="kh-header__palette-btn"
@@ -99,14 +102,17 @@ export const Header: React.FC = () => {
               <Link to="/" className="kh-mobile-menu__link" onClick={closeMenu}>
                 HOME
               </Link>
+              <Link to="/blog" className="kh-mobile-menu__link" onClick={closeMenu}>
+                BLOG
+              </Link>
 
               <div className="kh-mobile-menu__coming-soon">
                 <p className="kh-mobile-menu__coming-soon-title">
                   More sections coming soon
                 </p>
                 <p className="kh-mobile-menu__coming-soon-text">
-                  Projects and blog sections are in the works, showcasing my
-                  work and thoughts on software, systems, and delivery.
+                  A dedicated projects page is in the works, alongside the
+                  build log I'm publishing on the blog.
                 </p>
               </div>
             </div>

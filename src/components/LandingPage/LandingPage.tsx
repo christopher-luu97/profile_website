@@ -2,7 +2,7 @@ import React from "react";
 import { About } from "./About";
 import { CapabilitiesSection } from "./CapabilitiesSection";
 import { ExperienceSection } from "./ExperienceSection";
-import { CaseStudiesSection } from "./CaseStudiesSection";
+import { BlogTeaser } from "./BlogTeaser";
 import { StackSection } from "./StackSection";
 import { ContactSection } from "./ContactSection";
 import { ProjectsGrid } from "./ProjectGrid";
@@ -82,10 +82,10 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Case studies */}
-      <section className="kh-section" id="case-studies">
+      {/* Blog / build log */}
+      <section className="kh-section" id="blog">
         <div className="kh-container">
-          <CaseStudiesSection />
+          <BlogTeaser />
         </div>
       </section>
 

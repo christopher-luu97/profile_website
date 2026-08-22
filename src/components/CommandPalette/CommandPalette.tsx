@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./CommandPalette.css";
 
 interface PaletteItem {
@@ -6,16 +7,18 @@ interface PaletteItem {
   label: string;
   description: string;
   href: string;
+  /** "section" scrolls to a hash on the landing page; "route" navigates. */
+  kind: "section" | "route";
 }
 
 const ITEMS: PaletteItem[] = [
-  { id: "about",        label: "About",        description: "Who I am and what I do",                  href: "#about"        },
-  { id: "capabilities", label: "Capabilities",  description: "What I build and how I specialise",       href: "#capabilities"  },
-  { id: "experience",   label: "Experience",    description: "Professional background and sectors",     href: "#experience"    },
-  { id: "case-studies", label: "Case Studies",  description: "Planned write-ups and technical demos",  href: "#case-studies"  },
-  { id: "stack",        label: "Stack",         description: "Languages, tools, and platforms I use",   href: "#stack"         },
-  { id: "projects",     label: "Public Builds", description: "Open-source experiments and side work",  href: "#projects"      },
-  { id: "contact",      label: "Contact",       description: "Get in touch or find me online",          href: "#contact"       },
+  { id: "about",        label: "About",        description: "Who I am and what I do",                  href: "#about",        kind: "section" },
+  { id: "capabilities", label: "Capabilities",  description: "What I build and how I specialise",       href: "#capabilities",  kind: "section" },
+  { id: "experience",   label: "Experience",    description: "Professional background and sectors",     href: "#experience",    kind: "section" },
+  { id: "blog",         label: "Blog",          description: "Notes on what I'm learning",              href: "/blog",          kind: "route"   },
+  { id: "stack",        label: "Stack",         description: "Languages, tools, and platforms I use",   href: "#stack",         kind: "section" },
+  { id: "projects",     label: "Public Builds", description: "Open-source experiments and side work",  href: "#projects",      kind: "section" },
+  { id: "contact",      label: "Contact",       description: "Get in touch or find me online",          href: "#contact",       kind: "section" },
 ];
 
 export const CommandPalette: React.FC = () => {
@@ -24,6 +27,8 @@ export const CommandPalette: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const filtered = query.trim()
     ? ITEMS.filter(
@@ -39,19 +44,29 @@ export const CommandPalette: React.FC = () => {
     setActiveIndex(0);
   }, []);
 
-  const navigate = useCallback(
-    (href: string) => {
+  const goTo = useCallback(
+    (item: PaletteItem) => {
       close();
-      // Small delay so the overlay closes before the scroll triggers
+      if (item.kind === "route") {
+        navigate(item.href);
+        return;
+      }
+      // Section links only exist on the landing page — navigate there first
+      // if we're on another route, then scroll once it's mounted.
+      if (location.pathname !== "/") {
+        navigate("/");
+      }
+      // Small delay so the overlay closes (and the route change lands)
+      // before the scroll triggers.
       setTimeout(() => {
-        const id = href.replace("#", "");
+        const id = item.href.replace("#", "");
         const el = document.getElementById(id);
         if (el) {
           el.scrollIntoView({ behavior: "smooth", block: "start" });
         }
-      }, 80);
+      }, 120);
     },
-    [close],
+    [close, navigate, location.pathname],
   );
 
   // Global keyboard shortcut to open
@@ -99,7 +114,7 @@ export const CommandPalette: React.FC = () => {
     } else if (e.key === "Enter") {
       e.preventDefault();
       if (filtered[activeIndex]) {
-        navigate(filtered[activeIndex].href);
+        goTo(filtered[activeIndex]);
       }
     } else if (e.key === "Escape") {
       e.preventDefault();
@@ -119,7 +134,7 @@ export const CommandPalette: React.FC = () => {
         className="kh-palette"
         role="dialog"
         aria-modal="true"
-        aria-label="Command palette — navigate sections"
+        aria-label="Command palette — navigate the site"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search input */}
@@ -174,7 +189,7 @@ export const CommandPalette: React.FC = () => {
                 role="option"
                 aria-selected={index === activeIndex}
                 onMouseEnter={() => setActiveIndex(index)}
-                onClick={() => navigate(item.href)}
+                onClick={() => goTo(item)}
               >
                 <span className="kh-palette__item-label">{item.label}</span>
                 <span className="kh-palette__item-desc">{item.description}</span>

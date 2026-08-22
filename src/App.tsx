@@ -5,8 +5,9 @@ import { Footer } from "./components/Footer/Footer";
 import { LandingPage } from "./components/LandingPage/LandingPage";
 import { CommandPalette } from "./components/CommandPalette/CommandPalette";
 import { useReveal } from "./hooks/useReveal";
+import Blog from "./components/Blog/Blog";
+import BlogPost from "./components/Blog/BlogPost";
 // import Projects from "./components/Pages/Projects";
-// import Blog from "./components/Pages/Blog";
 
 function App() {
   useReveal();
@@ -25,6 +26,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
 
       <Footer />
